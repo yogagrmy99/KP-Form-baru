@@ -1,5 +1,4 @@
 <?php
-
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
 $degree = $_POST['degree'];
@@ -37,6 +36,7 @@ if (mysqli_connect_error()){
 else {
   $sql = "INSERT INTO register (id, full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
   values ('$id','$full_name','$degree','$inst','$email','$no_phone','$no_mobile','$st_address','$city','$region','$zip','$country','$status','$reg_type','$no_mai','$price')";  //ini utama
+  $sql1 = "SELECT * FROM register";
 
   if ($conn->query($sql)){
     echo "New record is inserted sucessfully";
