@@ -49,10 +49,6 @@ else {
   $conn->close();
 }
 }
-//echo "<html><body>"
-echo "<form action="ctk.php" method="POST">";
-echo "  <td><input type="submit" value="ctk"></td>";
-echo "</form>";
 
 /*
 if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) || !empty($phoneCode) || !empty($phone)) {

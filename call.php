@@ -20,7 +20,8 @@ $sql = "SELECT id, full_name, email FROM register";
     }
 
     $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
-  
+
+
   if (!empty($referer)) {
     
     echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';

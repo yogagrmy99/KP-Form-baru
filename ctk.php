@@ -33,7 +33,6 @@ $template->setValue('full_name', $full_name);
     $template->saveAs('result.docx');
 
 
-
 /*
 // Saving the document as OOXML file...
 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');

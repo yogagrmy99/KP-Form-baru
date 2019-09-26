@@ -18,14 +18,6 @@
   $(document).ready(function(){
       alert('tes js');
         });
-    function tanggal(){
-      n =  new Date();
-      y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-}
-
 </script>
 <script>
 
@@ -114,14 +106,21 @@ document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 <form action="ctk.php" method="POST">
   <td><input type="submit" value="ctk"></td>
 </form>
+<form action="word.php" method="POST">
+  <td><input type="submit" value="word"></td>
+</form>
 <br/>
+<form>
+<input type="button" value="Print this page" onClick="window.print()">
+</form>
 <br/>
 
 
-<?
+<?php
 
 $cd = date("d-m-Y");
 echo "Today is " .$cd;
 ?>
+
 </body>
 </html>
