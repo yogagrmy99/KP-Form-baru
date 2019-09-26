@@ -18,4 +18,16 @@ $sql = "SELECT id, full_name, email FROM register";
     else {
       echo "0 result";
     }
+
+    $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
+  
+  if (!empty($referer)) {
+    
+    echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';
+    
+  } else {
+    
+    echo '<p><a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a></p>';
+    
+  }
     ?>
