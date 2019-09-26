@@ -1,4 +1,5 @@
 <?php
+
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
 $degree = $_POST['degree'];
@@ -48,7 +49,10 @@ else {
   $conn->close();
 }
 }
-
+//echo "<html><body>"
+echo "<form action="ctk.php" method="POST">";
+echo "  <td><input type="submit" value="ctk"></td>";
+echo "</form>";
 
 /*
 if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) || !empty($phoneCode) || !empty($phone)) {

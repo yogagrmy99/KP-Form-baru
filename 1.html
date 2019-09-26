@@ -18,8 +18,18 @@
   $(document).ready(function(){
       alert('tes js');
         });
-</script>
+    function tanggal(){
+      n =  new Date();
+      y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+}
 
+</script>
+<script>
+
+</script>
 
  <form action="insert.php" method="POST">
 
@@ -98,5 +108,20 @@
  <form action="call.php" method="POST">
   <td><input type="submit" value="Panggil"></td>
 </form>
+<form action="cetak.php" method="POST">
+  <td><input type="submit" value="Cetak"></td>
+</form>
+<form action="ctk.php" method="POST">
+  <td><input type="submit" value="ctk"></td>
+</form>
+<br/>
+<br/>
+
+
+<?
+
+$cd = date("d-m-Y");
+echo "Today is " .$cd;
+?>
 </body>
 </html>
