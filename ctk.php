@@ -24,13 +24,15 @@ $price = $_POST['price'];
 
 $cd = date("d-m-Y");
 echo "Today is " .$cd;
+echo "nama: " .$full_name;
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
 $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
 $template->setValue('tanggal', $cd);
 $template->setValue('ID', $id);
 $template->setValue('full_name', $full_name);
-    $template->saveAs('result.docx');
+$template->saveAs('result.docx');
+include 'word.php';
 
 
 /*

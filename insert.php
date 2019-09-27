@@ -87,6 +87,9 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
  die();
 }
 */
+
+echo '<br/';
+include 'ctk.php';
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
   
   if (!empty($referer)) {
