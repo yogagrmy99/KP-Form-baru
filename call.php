@@ -111,20 +111,23 @@ if (!$query) {
 				<th>ID</th>
 				<th>Nama</th>
 				<th>Email</th>
+				<th>Opsi</th>
 			</tr>
 		</thead>
 		<tbody>
 		<?php
 		$no 	= 1;
-		$total 	= 0;
 		while ($row = mysqli_fetch_array($query))
 		{
-			echo '<tr>
-					<td>'.$no.'</td>
-					<td>'.$row['id'].'</td>
-					<td>'.$row['full_name'].'</td>
-					<td>'.$row['email'].'</td>
-				</tr>';
+			echo "<tr>
+					<td>".$no."</td>
+					<td>".$row['id']."</td>
+					<td>".$row['full_name']."</td>
+					<td>".$row['email']."</td>
+					<td><a href='edit.php?id=$row[id]'>Edit</a>
+					<a href='cetak.php?id=$row[id]'>Cetak</a>
+					</td>
+				</tr>";
 			$no++;
 		}?>
 		</tbody>
