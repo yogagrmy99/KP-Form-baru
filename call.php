@@ -125,7 +125,7 @@ if (!$query) {
 					<td>".$row['full_name']."</td>
 					<td>".$row['email']."</td>
 					<td><a href='edit.php?id=$row[id]'>Edit</a>
-					<a href='cetak.php?id=$row[id]'>Cetak</a>
+					<a href='ctk.php?id=$row[id]'>Cetak</a>
 					</td>
 				</tr>";
 			$no++;
