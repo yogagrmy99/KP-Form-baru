@@ -3,6 +3,7 @@ $db_host = 'localhost'; // Nama Server
 $db_user = 'root'; // User Server
 $db_pass = ''; // Password Server
 $db_name = 'yo'; // Nama Database
+$id = $_GET["id"];
 
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
@@ -10,7 +11,7 @@ if (!$conn) {
 }
 
 $sql = "SELECT * 
-		FROM register";
+		FROM register where id='$id'";
 		
 $query = mysqli_query($conn, $sql);
 
